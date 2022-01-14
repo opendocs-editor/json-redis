@@ -1,4 +1,4 @@
-import RedisJSON from "../src";
+import RedisJSON from "../min";
 
 const client = RedisJSON();
 
