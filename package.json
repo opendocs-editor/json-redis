@@ -24,7 +24,6 @@
         "adm-zip": "^0.5.9",
         "axios": "^0.24.0",
         "fs": "^0.0.1-security",
-        "husky": "^7.0.4",
         "path": "^0.12.7",
         "redis": "^4.0.2",
         "tar": "^6.1.11"
@@ -39,10 +38,7 @@
         "lint": "eslint . --ext .ts",
         "fix": "eslint . --ext .ts --fix",
         "start:prod": "yarn build && node dist/index.js",
-        "test": "yarn build && ts-node test/index.ts",
-        "postinstall": "husky install",
-        "husky:pre-commit": "echo \"[Husky] Pre-commit: Formatting and fixing.\" && yarn format && yarn fix && echo \"[Husky] Pre-commit succeeded.\"",
-        "husky:pre-push": "echo \"[Husky] Pre-push: Formatting, fixing, and building.\" && yarn clean && yarn fcheck && echo \"Fixing...\" && yarn format && yarn lint && echo \"Fixing...\" && yarn fix && yarn build && echo \"[Husky]: Pre-push succeeded.\""
+        "test": "yarn build && ts-node test/index.ts"
     },
     "publishConfig": {
         "registry": "https://npm.nosadnile.net/"

@@ -22,5 +22,16 @@
         "checkJs": true,
         "importHelpers": true
     },
-    "exclude": ["node_modules", "**/*.test.*", "test", "min", "out", "scripts"]
+    "exclude": [
+        "node_modules",
+        "**/*.test.*",
+        "test",
+        "min",
+        "out",
+        "scripts",
+        ".yarn",
+        ".husky",
+        ".pnp.cjs",
+        ".pnp.loader.mjs"
+    ]
 }
