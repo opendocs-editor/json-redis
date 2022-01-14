@@ -42,7 +42,7 @@
         "test": "yarn build && ts-node test/index.ts",
         "postinstall": "husky install",
         "husky:pre-commit": "echo \"[Husky] Pre-commit: Formatting and fixing.\" && yarn format && yarn fix && echo \"[Husky] Pre-commit succeeded.\"",
-        "husky:pre-push": "echo \"[Husky] Pre-push: Formatting, fixing, and building.\" && yarn clean && yarn check && echo \"Fixing...\" && yarn format && yarn lint && echo \"Fixing...\" && yarn fix && yarn build && echo \"[Husky]: Pre-push succeeded.\""
+        "husky:pre-push": "echo \"[Husky] Pre-push: Formatting, fixing, and building.\" && yarn clean && yarn fcheck && echo \"Fixing...\" && yarn format && yarn lint && echo \"Fixing...\" && yarn fix && yarn build && echo \"[Husky]: Pre-push succeeded.\""
     },
     "publishConfig": {
         "registry": "https://npm.nosadnile.net/"
