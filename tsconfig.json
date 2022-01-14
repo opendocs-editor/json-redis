@@ -1,6 +1,6 @@
 {
     "compilerOptions": {
-        "module": "esnext",
+        "module": "CommonJS",
         "removeComments": true,
         "preserveConstEnums": true,
         "sourceMap": true,
@@ -17,7 +17,10 @@
         "moduleResolution": "node",
         "esModuleInterop": true,
         "target": "es2021",
-        "declaration": true
+        "declaration": true,
+        "allowJs": true,
+        "checkJs": true,
+        "importHelpers": true
     },
-    "exclude": ["node_modules", "**/*.test.*", "test/**/*", "test/*"]
+    "exclude": ["node_modules", "**/*.test.*", "test", "scripts"]
 }
