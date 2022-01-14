@@ -64,7 +64,8 @@ async function main() {
             )}\n  - min/${files[i].replace(".js", ".d.ts")}`
         );
     }
-    if(!fs.existsSync(path.join(__dirname, "../out"))) fs.mkdirSync(path.join(__dirname, "../out"));
+    if (!fs.existsSync(path.join(__dirname, "../out")))
+        fs.mkdirSync(path.join(__dirname, "../out"));
     console.log("Creating zip archive...");
     try {
         const zip = AdmZip();
@@ -73,22 +74,36 @@ async function main() {
         await zip.addLocalFolderPromise("./min", { zipPath: "/min" });
         zip.addLocalFile("./package.json");
         await zip.writeZipPromise(out);
-    } catch(e) {
+    } catch (e) {
         console.log("An error occured: \n" + e);
         process.exit(0);
     }
     console.log("Generated:\n  - build.zip");
     console.log("Creating tar archive...");
     try {
-        await tar.c({ gzip: true, file: "out/build.tgz" }, [ "dist", "min", "package.json" ]);
-        await tar.c({ gzip: true, file: "out/build.tar.gz" }, [ "dist", "min", "package.json" ]);
-    } catch(e) {
+        await tar.c({ gzip: true, file: "out/build.tgz" }, [
+            "dist",
+            "min",
+            "package.json",
+        ]);
+        await tar.c({ gzip: true, file: "out/build.tar.gz" }, [
+            "dist",
+            "min",
+            "package.json",
+        ]);
+    } catch (e) {
         console.log("An error occured: \n" + e);
         process.exit(0);
     }
-    fs.rmSync(path.join(__dirname, "../dist"), { recursive: true, force: true });
+    fs.rmSync(path.join(__dirname, "../dist"), {
+        recursive: true,
+        force: true,
+    });
     fs.rmSync(path.join(__dirname, "../min"), { recursive: true, force: true });
-    fs.renameSync(path.join(__dirname, "../out"), path.join(__dirname, "../dist"));
+    fs.renameSync(
+        path.join(__dirname, "../out"),
+        path.join(__dirname, "../dist")
+    );
     console.log("Generated:\n  - build.tgz");
     console.log("Completed!");
     process.exit(0);

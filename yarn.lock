@@ -188,31 +188,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@opendocs/redis-json@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "@opendocs/redis-json@workspace:."
-  dependencies:
-    "@node-minify/core": ^6.2.0
-    "@node-minify/google-closure-compiler": ^6.2.0
-    "@types/node": ^17.0.8
-    "@typescript-eslint/eslint-plugin": ^5.9.1
-    "@typescript-eslint/parser": ^5.9.1
-    adm-zip: ^0.5.9
-    axios: ^0.24.0
-    eslint: ^8.6.0
-    fs: ^0.0.1-security
-    husky: ^7.0.4
-    nodemon: ^2.0.15
-    path: ^0.12.7
-    prettier: 2.5.1
-    redis: ^4.0.2
-    rimraf: ^3.0.2
-    tar: ^6.1.11
-    ts-node: ^10.4.0
-    typescript: ^4.5.4
-  languageName: unknown
-  linkType: soft
-
 "@sindresorhus/is@npm:^0.14.0":
   version: 0.14.0
   resolution: "@sindresorhus/is@npm:0.14.0"
@@ -1911,6 +1886,31 @@ __metadata:
   checksum: 0cecacb8025370686a916069a2ff81f7d55167421b6aa7270ee74e244012650dd6bce22b0852202ea7ff8624fce50ff0ec1bdf95914ccb4553426e290d5a63fa
   languageName: node
   linkType: hard
+
+"json-redis@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "json-redis@workspace:."
+  dependencies:
+    "@node-minify/core": ^6.2.0
+    "@node-minify/google-closure-compiler": ^6.2.0
+    "@types/node": ^17.0.8
+    "@typescript-eslint/eslint-plugin": ^5.9.1
+    "@typescript-eslint/parser": ^5.9.1
+    adm-zip: ^0.5.9
+    axios: ^0.24.0
+    eslint: ^8.6.0
+    fs: ^0.0.1-security
+    husky: ^7.0.4
+    nodemon: ^2.0.15
+    path: ^0.12.7
+    prettier: 2.5.1
+    redis: ^4.0.2
+    rimraf: ^3.0.2
+    tar: ^6.1.11
+    ts-node: ^10.4.0
+    typescript: ^4.5.4
+  languageName: unknown
+  linkType: soft
 
 "json-schema-traverse@npm:^0.4.1":
   version: 0.4.1

@@ -1,43 +1,43 @@
 default:
-  image: node:17.2.0
-  before_script:
-    - yarn version set berry
-    - yarn install
+    image: node:17.2.0
+    before_script:
+        - yarn version set berry
+        - yarn install
 
 stages:
-  - format
-  - lint
-  - test
-  - build
-  - deploy
+    - format
+    - lint
+    - test
+    - build
+    - deploy
 
 format:
-  stage: format
-  script:
-    - yarn fcheck
+    stage: format
+    script:
+        - yarn fcheck
 
 lint:
-  stage: lint
-  script:
-    - yarn lint
-  needs: ["format"]
+    stage: lint
+    script:
+        - yarn lint
+    needs: ["format"]
 
 test:
-  stage: test
-  script:
-    - yarn test
-  needs: ["lint"]
+    stage: test
+    script:
+        - yarn test
+    needs: ["lint"]
 
 build:
-  stage: build
-  script:
-    - yarn build
-  artifacts:
-    paths:
-      - dist/*
-  needs: ["test"]
+    stage: build
+    script:
+        - yarn build
+    artifacts:
+        paths:
+            - dist/*
+    needs: ["test"]
 
 deploy:
-  stage: deploy
-  steps:
-    - yarn publish --new-version unstable-$CI_PIPELINE_ID
+    stage: deploy
+    steps:
+        - yarn publish --new-version unstable-$CI_PIPELINE_ID
