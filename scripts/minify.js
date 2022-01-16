@@ -27,6 +27,13 @@ async function main() {
         console.log(
             `[${i + 1}/${files.length}] Minifying ${files[i]} to ${files[i]}...`
         );
+        fs.writeFileSync(
+            folder + "/" + files[i],
+            fs
+                .readFileSync(folder + "/" + files[i])
+                .toString()
+                .replaceAll("redis_1.default.", "redis_1.")
+        );
         try {
             await minify({
                 compressor: gcc,

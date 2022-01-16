@@ -13,7 +13,7 @@ export default class RedisJSONPromiseClient {
         redis.RedisModules,
         redis.RedisScripts
     >;
-    private events: EventHandlers = {};
+    private events: EventHandlers = { init: [] };
     private hasInitialized = false;
 
     constructor(
