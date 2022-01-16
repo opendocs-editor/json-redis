@@ -1,6 +1,6 @@
 {
     "name": "json-redis",
-    "version": "2.1.7",
+    "version": "2.1.8",
     "description": "A client-side JSON saver and parser for Redis",
     "main": "dist/index.js",
     "repository": "https://github.com/opendocs-editor/json-redis",
@@ -50,6 +50,19 @@
     "files": [
         "dist/**/*.*",
         "min/**/*.*",
-        "**/*.*"
+        "package.json",
+        "src/**/*.*",
+        "test/**/*.*",
+        "scripts/**/*.*",
+        ".eslintignore",
+        ".eslintrc",
+        ".gitignore",
+        ".npmignore",
+        ".prettierignore",
+        ".prettierrc.js",
+        "package.json",
+        "README.md",
+        "tsconfig.json",
+        "yarn.lock"
     ]
 }
