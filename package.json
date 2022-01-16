@@ -42,6 +42,5 @@
     },
     "publishConfig": {
         "registry": "https://npm.nosadnile.net/"
-    },
-    "packageManager": "yarn@3.1.1"
+    }
 }
