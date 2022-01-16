@@ -8,12 +8,10 @@ function usePromise(
     return new _promise(_client);
 }
 
-Object.assign(usePromise, {
-    useCallback: (
-        _client?: redis.RedisClientType<redis.RedisModules, redis.RedisScripts>
-    ) => {
-        return new _callback(_client);
-    },
-});
+usePromise.prototype.useCallback = (
+    _client?: redis.RedisClientType<redis.RedisModules, redis.RedisScripts>
+) => {
+    return new _callback(_client);
+};
 
 export default usePromise;
