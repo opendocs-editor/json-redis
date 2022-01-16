@@ -1,6 +1,6 @@
 {
     "name": "json-redis",
-    "version": "2.1.5",
+    "version": "2.1.6",
     "description": "A client-side JSON saver and parser for Redis",
     "main": "dist/index.js",
     "repository": "https://github.com/opendocs-editor/json-redis",
