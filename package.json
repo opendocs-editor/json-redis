@@ -1,9 +1,9 @@
 {
-    "name": "json-redis",
+    "name": "@opendocs/json-redis",
     "version": "2.1.2",
     "description": "A client-side JSON saver and parser for Redis",
     "main": "min/index.js",
-    "repository": "https://git.nosadnile.net/opendocs/redis-json",
+    "repository": "https://github.com/opendocs-editor/json-redis",
     "author": "Jacob Sapoznikow <jacob1coder@gmail.com>",
     "license": "MIT",
     "type": "commonjs",
@@ -40,9 +40,6 @@
         "start:prod": "yarn build && node dist/index.js",
         "prepublish": "yarn format && yarn fix && yarn clean && tsc -p . && node scripts/minify-prepublish.js",
         "postpublish": "node scripts/minify.js"
-    },
-    "publishConfig": {
-        "registry": "https://npm.nosadnile.net/"
     },
     "files": [
         "dist/**/*.*",
