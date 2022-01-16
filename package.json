@@ -1,12 +1,17 @@
 {
     "name": "json-redis",
-    "version": "2.1.6",
+    "version": "2.1.7",
     "description": "A client-side JSON saver and parser for Redis",
     "main": "dist/index.js",
     "repository": "https://github.com/opendocs-editor/json-redis",
     "author": "Jacob Sapoznikow <jacob1coder@gmail.com>",
     "license": "MIT",
     "type": "commonjs",
+    "keywords": [
+        "json",
+        "redis",
+        "client"
+    ],
     "devDependencies": {
         "@node-minify/core": "^6.2.0",
         "@node-minify/google-closure-compiler": "^6.2.0",
