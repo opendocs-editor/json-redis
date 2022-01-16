@@ -28,25 +28,29 @@ export default class RedisJSONPromiseClient {
         if (_client) {
             this.client = _client;
         } else {
-            if(host && port && user && pass && secure && dbNumber) {
+            if (host && port && user && pass && secure && dbNumber) {
                 this.client = redis.createClient({
-                    url: `redis${secure === true ? "s" : ""}://${user}:${pass}@${host}:${port}/${dbNumber}`
+                    url: `redis${
+                        secure === true ? "s" : ""
+                    }://${user}:${pass}@${host}:${port}/${dbNumber}`,
                 });
-            } else if(host && port && user && pass && secure) {
+            } else if (host && port && user && pass && secure) {
                 this.client = redis.createClient({
-                    url: `redis${secure === true ? "s" : ""}://${user}:${pass}@${host}:${port}`
+                    url: `redis${
+                        secure === true ? "s" : ""
+                    }://${user}:${pass}@${host}:${port}`,
                 });
-            } else if(host && port && user && pass) {
+            } else if (host && port && user && pass) {
                 this.client = redis.createClient({
-                    url: `redis://${user}:${pass}@${host}:${port}`
+                    url: `redis://${user}:${pass}@${host}:${port}`,
                 });
-            } else if(host && port) {
+            } else if (host && port) {
                 this.client = redis.createClient({
-                    url: `redis://${host}:${port}`
+                    url: `redis://${host}:${port}`,
                 });
-            } else if(host) {
+            } else if (host) {
                 this.client = redis.createClient({
-                    url: `redis://${host}`
+                    url: `redis://${host}`,
                 });
             } else {
                 this.client = redis.createClient();
