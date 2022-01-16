@@ -6,7 +6,6 @@ default:
 stages:
     - format
     - lint
-    - test
     - build
     - deploy
 
@@ -20,12 +19,6 @@ lint:
     script:
         - yarn lint
     needs: ["format"]
-
-test:
-    stage: test
-    script:
-        - yarn test
-    needs: ["lint"]
 
 build:
     stage: build
