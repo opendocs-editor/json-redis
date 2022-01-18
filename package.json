@@ -60,9 +60,9 @@
         ".npmignore",
         ".prettierignore",
         ".prettierrc.js",
-        "package.json",
         "README.md",
         "tsconfig.json",
         "yarn.lock"
-    ]
+    ],
+    "packageManager": "yarn@3.1.1"
 }
