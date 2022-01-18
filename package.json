@@ -1,5 +1,5 @@
 {
-    "name": "json-redis",
+    "name": "@opendocs/json-redis",
     "version": "2.1.8",
     "description": "A client-side JSON saver and parser for Redis",
     "main": "dist/index.js",
