@@ -5,6 +5,7 @@ An easy JSON module for Redis on the client side.
 ## About
 
 json-redis is a quick promise-based Node.js module to allow you to store objects in Redis.
+Note: This is NOT redis-json. This works 100% on the client-side and does not need any server-side configuration.
 
 ## Usage
 
