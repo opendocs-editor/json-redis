@@ -11,7 +11,9 @@ jobs:
                   registry-url: "https://npm.pkg.github.com"
                   scope: "@opendocs"
             - run: |
-                  yarn install
-                  yarn npm publish
+                  node scripts/preci.js
+                  npm install
+                  npm ci
+                  npm publish
               env:
                   NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
